@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המדריך המלא לפריסת אתרים באינטרנט</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Cool Blues and Grays -->
+    <!-- Application Structure Plan: A thematic, single-page narrative structure was chosen to transform the static project plan into an engaging user journey. It flows from the 'why' (problem/solution) to the 'how' (core process of website creation), 'what' (key topics covered), and 'when' (roadmap for this educational platform), which is more intuitive for understanding an educational resource than a simple list of report sections. -->
+    <!-- Visualization & Content Choices:
+    - User Flow (How It Works): Goal: Explain the general process of website creation. Viz: Interactive 3-step diagram (HTML/CSS). Interaction: Click to reveal details. Justification: Simplifies the core conceptual steps for users.
+    - Roadmap: Goal: Show the development timeline for *this educational platform*. Viz: Horizontal Bar Chart (Chart.js/Canvas). Interaction: Clickable bars to show phase details. Justification: More dynamic and visually interesting than a static list for a project timeline.
+    - Features (Key Topics): Goal: Detail the main learning areas. Viz: Grid of cards (HTML/CSS). Interaction: Hover effects. Justification: Easy to scan and compare learning modules.
+    - Tech Stack: Goal: Inform about relevant technologies. Viz: Logo grid (HTML/CSS). Justification: Visually represents the technologies effectively.
+    - Resources: Goal: Provide external tools. Viz: Categorized lists of links (HTML/CSS). Justification: Direct and actionable.
+    - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Assistant', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header id="main-header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-lg font-bold text-slate-900 whitespace-nowrap overflow-hidden text-ellipsis">המדריך המלא לפריסת אתרים באינטרנט</h1>
+            <div class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#vision" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">החזון</a>
+                <a href="#how-it-works" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">איך זה עובד</a>
+                <a href="#features" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">מה תלמדו</a>
+                <a href="#tech-stack" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">טכנולוגיות</a>
+                <a href="#roadmap" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">מפת דרכים</a>
+                <a href="#resources" class="text-slate-600 hover:text-blue-600 transition whitespace-nowrap">משאבים</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center py-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">בואו ללמוד איך להעלות את האתר שלכם לאוויר. בקלות!</h2>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-8">אנחנו כאן כדי ללמד אתכם את כל השלבים החשובים: איך לתכנן, לעצב ולפרסם את האתר שלכם באינטרנט, גם אם אין לכם ניסיון קודם. אתם תתמקדו ביצירה, ואנחנו נדאג שתדעו בדיוק איך להעלות אותה לרשת.</p>
+            <a href="#how-it-works" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-transform transform hover:scale-105">התחילו ללמוד עכשיו</a>
+        </section>
+
+        <!-- The Vision Section -->
+        <section id="vision" class="py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-blue-600 font-semibold">החזון שלנו</span>
+                    <h3 class="text-4xl font-bold text-slate-900 mt-2 mb-4">להעצים יוצרים עם ידע וכלים</h3>
+                    <p class="text-lg text-slate-600 mb-4">הרבה יוצרים מוכשרים יודעים לבנות אתרים, אבל כשמגיעים לשלב של להעלות אותם לאינטרנט – אירוח, הגדרות שרת, דומיינים ואבטחה – זה יכול להיות מסובך ולקחת המון זמן. אנחנו כאן כדי לפשט לכם את כל זה.</p>
+                    <p class="text-lg text-slate-600">המדריך שלנו מקיף, פשוט ובטוח, והוא יאפשר לכל אחד – ממפתחים עצמאיים ועד עסקים קטנים – להבין איך להפוך את קבצי הקוד שלכם לאתר חי ופעיל באינטרנט. ככה תוכלו לממש את כל הפוטנציאל של היצירות שלכם!</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">למי זה מיועד?</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mt-1 mr-3 ml-3">✓</span>
+                            <p><strong class="font-semibold text-slate-800">למפתחים עצמאיים</strong> שרוצים להבין טוב יותר איך להעלות את הפרויקטים שלהם.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mt-1 mr-3 ml-3">✓</span>
+                             <p><strong class="font-semibold text-slate-800">לעסקים קטנים</strong> שרוצים לדעת איך להטמיע אתר או צ'אט בוט משלהם.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mt-1 mr-3 ml-3">✓</span>
+                            <p><strong class="font-semibold text-slate-800">לבלוגרים ויוצרי תוכן</strong> שרוצים ללמוד איך לפרסם את האתרים או התוכן האינטראקטיבי שלהם.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section (Now: The Journey to a Live Website) -->
+        <section id="how-it-works" class="py-16 bg-slate-100 rounded-2xl">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-900">המסע שלכם לאתר חי: בואו נתחיל!</h3>
+                <p class="text-lg text-slate-600 mt-2">נלמד אתכם את כל השלבים החשובים כדי שהאתר שלכם יעלה לאוויר בהצלחה.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Step 1: Planning & Definition -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold">1</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2">תכנון ואפיון</h4>
+                    <p class="text-slate-600">תכננו מה אתם רוצים שהאתר שלכם יעשה, מי קהל היעד שלכם ואיזה תוכן תעלו. זה הבסיס להכל!</p>
+                </div>
+                <!-- Step 2: Design & Development -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold">2</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2">עיצוב ובנייה</h4>
+                    <p class="text-slate-600">בחרו את הכלים המתאימים לכם (כמו בוני אתרים או שפות קוד), תעצבו את המראה ובנו את קבצי האתר.</p>
+                </div>
+                <!-- Step 3: Deployment & Publishing -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold">3</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2">העלאה ופרסום</h4>
+                    <p class="text-slate-600">נלמד אתכם איך להעלות את הקבצים שלכם לשרת, לחבר דומיין משלכם ולהפוך את האתר לזמין לכולם.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Features Section (Now: What You Will Learn) -->
+        <section id="features" class="py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-900">מה נלמד אתכם: הנושאים המרכזיים</h3>
+                <p class="text-lg text-slate-600 mt-2">אנחנו נספק לכם את כל הידע והכלים כדי שתוכלו להבין ולבצע כל שלב בפרויקט שלכם.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">איך האתר שלכם עולה לאוויר</h4>
+                    <p class="text-slate-600">נלמד אתכם על שירותי אירוח, שרתים, CDN ואבטחה (SSL).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">ניהול שינויים בקוד</h4>
+                    <p class="text-slate-600">תכירו את Git ו-GitHub כדי לנהל בקלות את השינויים באתר שלכם.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">דומיין ואבטחה (SSL)</h4>
+                    <p class="text-slate-600">נלמד אתכם איך לבחור דומיין, לקנות אותו ולחבר אבטחה לאתר.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">מעקב ותיקון תקלות</h4>
+                    <p class="text-slate-600">כלים ושיטות שיעזרו לכם לעקוב אחרי האתר ולפתור בעיות אם הן צצות.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">תהליכי בנייה</h4>
+                    <p class="text-slate-600">נבין יחד איך עובדים כלי בנייה כמו Webpack ו-Vite לפרויקטים מורכבים (כמו אתרי React או Vue).</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+                    <h4 class="text-xl font-bold mb-2">אירוח אתרים</h4>
+                    <p class="text-slate-600">נכיר את סוגי שירותי האירוח השונים – חינם, בתשלום או לפי שימוש.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="py-16 bg-slate-100 rounded-2xl">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-900">הכלים הטכנולוגיים שבהם תשתמשו</h3>
+                <p class="text-lg text-slate-600 mt-2">אלה הכלים המודרניים, האמינים והגמישים שתלמדו עליהם, עם דגש על שירותי Google Cloud.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">צד לקוח</h4>
+                    <p class="text-slate-600">HTML, CSS, JavaScript, React</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">צד שרת</h4>
+                    <p class="text-slate-600">Node.js, Python, PHP</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">מסד נתונים</h4>
+                    <p class="text-slate-600">SQL (PostgreSQL), NoSQL (Firestore)</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">אירוח ופריסה</h4>
+                    <p class="text-slate-600">Google Cloud, Firebase, Netlify, Vercel</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-900">מפת הדרכים שלנו</h3>
+                <p class="text-lg text-slate-600 mt-2">אלה השלבים שבהם נפתח את המדריך המקיף הזה עבורכם.</p>
+            </div>
+            <div class="chart-container">
+                <canvas id="roadmapChart"></canvas>
+            </div>
+             <div id="roadmap-details" class="mt-8 text-center bg-white p-6 rounded-2xl shadow-lg border border-slate-200 min-h-[100px]">
+                <p class="text-slate-500">לחצו על שלב במפת הדרכים כדי לראות פרטים נוספים.</p>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="py-16 bg-slate-100 rounded-2xl">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-900">משאבים מומלצים ליצירה ופריסה</h3>
+                <p class="text-lg text-slate-600 mt-2">הנה כמה כלים ושירותים מומלצים שיעזרו לכם לתכנן, לבנות ולהעלות את האתר שלכם לאוויר.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                    <h4 class="text-xl font-bold mb-4">אתרים לבניית אתרים (Website Builders)</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://www.wix.com/he" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Wix - פלטפורמה לבניית אתרים בקלות</a></li>
+                        <li><a href="https://www.wordpress.com/he/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">WordPress.com - לבניית בלוגים ואתרים</a></li>
+                        <li><a href="https://www.squarespace.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Squarespace - עיצובים יפים לאתרים</a></li>
+                        <li><a href="https://www.shopify.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Shopify - לבניית חנויות אונליין</a></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                    <h4 class="text-xl font-bold mb-4">שירותי אירוח ופריסה</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Netlify - פריסה מהירה לאתרים סטטיים</a></li>
+                        <li><a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Vercel - פלטפורמה למפתחי Frontend</a></li>
+                        <li><a href="https://firebase.google.com/docs/hosting" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Firebase Hosting - אירוח אתרים מבית גוגל</a></li>
+                        <li><a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Render - אירוח יישומים ואתרים</a></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                    <h4 class="text-xl font-bold mb-4">אתרים לרכישת דומיין</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://www.godaddy.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">GoDaddy - רישום דומיינים ושירותי אירוח</a></li>
+                        <li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Namecheap - דומיינים במחירים נוחים</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        &#x2B06;
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 המדריך המלא לפריסת אתרים באינטרנט. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const roadmapData = {
+                labels: ['שלב 1: תכנון ועיצוב', 'שלב 2: פיתוח MVP', 'שלב 3: הרחבת תכונות', 'שלב 4: אבטחה וסקיילביליות'],
+                datasets: [{
+                    label: 'משך (ברבעונים)',
+                    data: [1, 2, 2, 1],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.7)',
+                        'rgba(34, 197, 94, 0.7)',
+                        'rgba(249, 115, 22, 0.7)',
+                        'rgba(239, 68, 68, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(34, 197, 94, 1)',
+                        'rgba(249, 115, 22, 1)',
+                        'rgba(239, 68, 68, 1)'
+                    ],
+                    borderWidth: 1,
+                    barThickness: 50,
+                }]
+            };
+
+            const roadmapDetailsContent = {
+                0: {
+                    title: "שלב 1: תכנון ועיצוב UI/UX",
+                    description: "אפיון מפורט של זרימת המשתמש, ארכיטקטורת המערכת, ועיצוב ממשק המשתמש (Wireframes & Mockups)."
+                },
+                1: {
+                    title: "שלב 2: בניית המדריך הראשוני (MVP)",
+                    description: "נבנה את הבסיס של המדריך, כולל ההסברים הראשונים על העלאת קבצים, הגדרות ואיך לראות את הפרויקט שלכם באוויר."
+                },
+                2: {
+                    title: "שלב 3: הרחבת תכונות",
+                    description: "הוספת תמיכה בדומיינים מותאמים אישית, ניהול גרסאות, דאשבורד אנליטיקס ואינטגרציות נוספות."
+                },
+                3: {
+                    title: "שלב 4: אבטחה וביצועים",
+                    description: "נדאג שהמדריך יהיה בטוח ויעבוד מהר, ונתאים אותו למספר גדול של משתמשים שילמדו איתנו."
+                }
+            };
+
+            const ctx = document.getElementById('roadmapChart').getContext('2d');
+            const roadmapChart = new Chart(ctx, {
+                type: 'bar',
+                data: roadmapData,
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            enabled: true,
+                            callbacks: {
+                                label: function(context) {
+                                    return ' לחצו לפרטים נוספים';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: 'ציר זמן (רבעונים)',
+                                font: { size: 14 }
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                             ticks: {
+                                font: {
+                                    size: 14,
+                                    weight: '600'
+                                }
+                            }
+                        }
+                    },
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const elementIndex = elements[0].index;
+                            const detailsDiv = document.getElementById('roadmap-details');
+                            const content = roadmapDetailsContent[elementIndex];
+                            
+                            detailsDiv.innerHTML = `
+                                <h4 class="text-2xl font-bold text-slate-900 mb-2">${content.title}</h4>
+                                <p class="text-lg text-slate-600">${content.description}</p>
+                            `;
+                        }
+                    }
+                }
+            });
+
+            // Scroll to Top Button Logic
+            const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) { // Show button after scrolling 300px down
+                    scrollToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollToTopButton.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    scrollToTopButton.classList.remove('opacity-100', 'pointer-events-auto');
+                    scrollToTopButton.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Smooth scrolling for navigation links, accounting for header height
+            const header = document.getElementById('main-header');
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = header.offsetHeight;
+                        // Adjust scroll position by header height + a small offset for padding
+                        const offset = targetElement.offsetTop - headerHeight - 10; // 10px extra padding
+                        
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
